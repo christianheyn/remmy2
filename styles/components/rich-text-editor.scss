@@ -1,0 +1,117 @@
+.rich-text-editor {
+    $block: &;
+
+    position: relative;
+    padding-top: 30px;
+
+    &--inner {
+        position: relative;
+        display: block;
+        min-width: 300px;
+        min-height: 100px;
+        padding: 10px;
+        transition: all 150ms ease-out;
+
+        figure {
+            margin: 1px;
+            width: 100%;
+        }
+    }
+
+    &--controls {
+        position: absolute;
+        top: -40px;
+        left: 4px;
+        padding: 4px;
+        max-width: 90%;
+        background-color: #555;
+        border-radius: 4px;
+        z-index: 3;
+    }
+
+    &--content-media {
+        width: 100%;
+
+        img,
+        audio,
+        video {
+            position: relative;
+            display: inline-block;
+            max-width: 60%;
+            margin: 0 20%,
+        }
+    }
+
+    &--inline-styles,
+    &--media-type {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+    }
+
+    &--box-bg-button,
+    &--font-color-button,
+    &--block-type-button,
+    &--inline-styles-button,
+    &--media-type-button {
+        position: relative;
+        min-width: 30px;
+        height: 20px;
+        border-radius: 4px;
+        margin: 0 4px 0 0;
+        border: 0;
+        font-size: 10px;
+        background-color: #fff;
+    }
+
+    &--media-type-button {
+        margin-right: 0;
+    }
+}
+
+.govie-react-attribute--template-stage {
+    .rich-text-editor {
+        width: 100%;
+        transition: all 300ms ease-out;
+    }
+
+    &.standard-1 {
+        .rich-text-editor {
+            display: none;
+        }
+
+        .is--rte-1 {
+            display: block;
+            bottom: 20px;
+            left: 0;
+        }
+    }
+
+    &.standard-2 {
+        .rich-text-editor {
+            position: absolute;
+            width: 50%;
+        }
+
+        .is--rte-1 {
+            left: 0;
+        }
+
+        .is--rte-2 {
+            right: 0;
+        }
+
+        .is--rte-3,
+        .is--rte-4,
+        .is--rte-5 {
+            display: none;
+        }
+    }
+
+    &.standard-3 {
+        .is--rte-4,
+        .is--rte-5 {
+            display: none;
+        }
+    }
+}

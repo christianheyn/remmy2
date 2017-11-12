@@ -1,0 +1,182 @@
+@import '../../node_modules/react-select/scss/default';
+
+.Select-clear {
+    display: none;
+}
+
+.govie-react-attribute--string,
+.govie-react-attribute--enum,
+.govie-react-attribute--number,
+.govie-react-attribute--color,
+.govie-react-attribute--boolean,
+.govie-react-attribute--action,
+.govie-react-attribute--color,
+.govie-react-attribute--template {
+    position: relative;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.govie-react-attribute--color {
+    $block: &;
+
+    &-box {
+        position: relative;
+        width: 34px;
+        height: 34px;
+        display: inline-block;
+        margin: 0 4px 4px 0;
+        border: 0;
+        outline: 0;
+        border-radius: 4px;
+
+        &.is--active {
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                top: 0;
+                left: 0;
+                border-radius: 6px;
+                transform: scale(0.8);
+                border: solid 4px rgba(#fff, 0.8);
+            }
+
+            &::after {
+                transform: scale(0.9);
+                border: solid 2px rgba(#000, 0.8);
+            }
+        }
+    }
+}
+
+.govie-react-attribute--number {
+    $block: &;
+
+    &-control {
+        position: relative;
+        width: 100%;
+        height: 34px;
+    }
+
+    &-down,
+    &-up {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        left: 0;
+        top: 0;
+        outline: 0;
+        border: 0;
+        border-radius: 4px 0 0 4px;
+        background-color: #999;
+        color: #fff;
+    }
+
+    &-up {
+        left: auto;
+        right: 0;
+        border-radius: 0 4px 4px 0;
+    }
+
+    input {
+        height: 34px;
+        width: 100%;
+        padding: 4px 46px;
+        border-radius: 6px;
+        border: 0;
+    }
+}
+
+.govie-react-attribute--boolean {
+    $block: &;
+
+    background-color: transparent;
+    border: 0;
+    padding: 0 0 0 30px;
+    outline: 0;
+
+    &-check {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    &.is--active {
+        #{$block}-check {
+            background-color: #000;
+        }
+    }
+}
+
+.govie-react-attribute--string {
+    input {
+        width: 100%;
+        height: 34px;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 0;
+    }
+}
+
+.govie-react-attribute--group {
+    position: relative;
+    width: auto;
+    padding: 40px 20px 20px;
+    margin: 10px 0;
+    background-color: #666;
+    border-radius: 2px;
+    max-height: 600px;
+    transition: all 100ms ease-out;
+
+    &-title {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        right: 10px;
+        color: #ddd;
+        font-size: 12px;
+        font-weight: 600;
+        border-bottom: solid 1px #888;
+        padding-bottom: 10px;
+        padding-right: 30px;
+        letter-spacing: 0.05em;
+    }
+
+    &-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background-color: #222;
+        border: 0;
+        border-radius: 3px;
+        height: 20px;
+        width: 20px;
+        padding: 0;
+        display: block;
+    }
+
+    &.is--closed {
+        max-height: 30px;
+        padding-top: 30px;
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+}
+
+.govie-react-attribute--title {
+    position: relative;
+    color: #aaa;
+    font-size: 13px;
+    display: block;
+    margin: 15px 0 6px 1px;
+    letter-spacing: 0.03em;
+    user-select: none;
+}

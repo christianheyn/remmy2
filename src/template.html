@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>remmy 2</title>
+  <meta name='viewport' content='minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,700" rel="stylesheet">
+</head>
+<body>
+
+<script>
+   const {ipcRenderer} = require('electron');
+   const body = document.body;
+
+   ipcRenderer.on('copy', () => {
+      const data = window.getData();
+      const lastTextarea = data.lastTextarea;
+
+      const key = (lastTextarea === 'input') ? 'output' : 'input';
+   	  ipcRenderer.send('copy', data[key]),
+      body.setAttribute('class', 'last--' + key);
+      window.setTimeout(() => {
+        body.setAttribute('class', '');
+      }, 250);
+   });
+</script>
+</body>
+</html>

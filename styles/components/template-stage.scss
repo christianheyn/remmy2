@@ -1,0 +1,96 @@
+.govie-react-attribute--template-stage {
+	position: fixed;
+	top: 30px;
+	left: 20px;
+	right: 260px;
+	bottom: 20px;
+	border: solid 2px #fff;
+	transition: all 300ms ease-out;
+
+	.govie-react-attribute--template-stage-max {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: solid 8px #fff;
+		background-color: transparent;
+		display: none;
+	}
+
+	&.is--mini {
+		transform: scale(0.1);
+		transform-origin: left top;
+
+		.govie-react-attribute--template-stage-max {
+			display: block;
+			z-index: 9;
+		}
+	}
+}
+
+.govie-react-attribute--template-menu {
+	position: fixed;
+	top: 30px;
+	right: 10px;
+	bottom: 20px;
+	width: 240px;
+	background-color: #fff;
+	transition: all 300ms ease-out;
+
+
+	.govie-react-attribute--template-menu-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 0;
+	}
+
+	&-close-btn {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 9;
+	}
+
+	&-button {
+		position: relative;
+		width: 200px;
+		margin: 10px 15px;
+		height: 100px;
+		outline: 0;
+		border-radius: 4px;
+		border: 0;
+
+		&:hover {
+			border: solid 3px #444;
+		}
+
+		&.is--active {
+			border: solid 3px #09f;
+		}
+	}
+}
+
+.govie-react-attribute--template-rich-editor {
+	background-color: #fff;
+	padding: 20px;
+
+	.DraftEditor-editorContainer {
+		border: dotted 1px #444;
+		padding: 10px;
+		margin-top: 10px;
+	}
+}
+
+.rich-editor--controls {
+	button {
+		font-size: 11px;
+		padding: 2px 6px;
+		border: 0;
+		background-color: #aaa;
+		color: #fff;
+		margin: 2px;
+	}
+}

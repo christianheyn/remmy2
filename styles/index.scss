@@ -1,0 +1,102 @@
+@import './var/fonts';
+@import './var/color';
+@import './var/sizes';
+@import 'mixins/vendor-prefix';
+
+/*
+ * Monokai colors ==========
+ */
+$color-bg: #34352E;
+$color-bg-light: #7A7A6A;
+$color-red: #D14572;
+$color-yellow: #DEDF9B;
+$color-green: #A8D63A;
+$color-blue: #72D1D1;
+/*
+ * =========================
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $color-bg;
+    font-family: 'Overpass Mono', monospace;
+    overflow: hidden;
+}
+
+.drag-area {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 3;
+}
+
+.remmy--root {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+textarea {
+    position: relative;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 20px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: $color-blue;
+    resize: none;
+    border-bottom: solid 2px transparent;
+    transition: all 200ms ease-out;
+
+    &.remmy--input {
+        color: $color-yellow;
+
+        &:focus {
+            border-bottom: solid 2px $color-yellow;
+        }
+    }
+
+    &.remmy--output {
+        color: $color-blue;
+
+        &:focus {
+            border-bottom: solid 2px $color-blue;
+        }
+    }
+
+    &::selection {
+        color: #fff;
+        background: $color-red;
+    }
+}
+
+.last--output {
+    .remmy--output {
+        background-color: $color-bg-light;
+        transform: scale(1.02);
+    }
+}
+
+.last--input {
+    .remmy--input {
+        background-color: $color-bg-light;
+        transform: scale(1.02);
+    }
+}
