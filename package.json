@@ -12,7 +12,8 @@
     "dev": " webpack-dashboard -- webpack-dev-server --progress --profile --colors",
     "test": "npm run unittest && npm run lint",
     "unittest": "export NODE_ENV=test && jest",
-    "watch:test": "npm run unittest -- --watch"
+    "watch:test": "npm run unittest -- --watch",
+    "publish": "build --mac --win -p always"
   },
   "repository": {
     "type": "git",
