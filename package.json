@@ -1,6 +1,6 @@
 {
   "name": "remmy2",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "px to rem calculator",
   "main": "./main.js",
   "scripts": {

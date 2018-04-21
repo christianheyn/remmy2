@@ -91,7 +91,7 @@ export const makeApp = (React) => {
                       className={inputClassName}
                       ref={'input'}
                       type={'text'}
-                      placeholder={'px'}
+                      placeholder={'css in px'}
                       value={$.state.input}
                       onChange={handleInputChange}
                       onFocus={() => selectText('input')}
@@ -102,7 +102,7 @@ export const makeApp = (React) => {
                       className={outputClassName}
                       ref={'output'}
                       type={'text'}
-                      placeholder={unit}
+                      placeholder={`css in ${unit}`}
                       value={$.state.output}
                       onChange={handleOutputChange}
                       onFocus={() => selectText('output')}
