@@ -88,7 +88,7 @@ if (process.platform === 'darwin') {
 const createDefaultWindow = () => {
     win = new BrowserWindow({
         titleBarStyle: 'hiddenInset',
-        width: 400,
+        width: 420,
         maxWidth: 400,
         minWidth: 400,
         height: 160,
