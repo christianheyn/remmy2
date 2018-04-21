@@ -28,7 +28,7 @@
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "electron-updater": "^2.16.1"
+    "electron-updater": "^2.18.1"
   },
   "devDependencies": {
     "electron-builder": "^20.10.0",
