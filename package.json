@@ -13,7 +13,7 @@
     "test": "npm run unittest && npm run lint",
     "unittest": "export NODE_ENV=test && jest",
     "watch:test": "npm run unittest -- --watch",
-    "publish": "build --mac --win -p always"
+    "publish": "build --mac -p always"
   },
   "repository": {
     "type": "git",
@@ -27,11 +27,11 @@
     "core-js": "^2.5.1",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "electron": "^1.7.9",
-    "electron-builder": "^19.43.3"
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "electron-builder": "^19.43.3",
+    "electron": "^1.7.9",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",

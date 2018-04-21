@@ -108,6 +108,24 @@ const createDefaultWindow = () => {
 
     return win;
 }
+autoUpdater.on('checking-for-update', () => {
+  win.webContents.send('copy', true);
+})
+autoUpdater.on('update-available', (info) => {
+  win.webContents.send('copy', true);
+})
+autoUpdater.on('update-not-available', (info) => {
+  win.webContents.send('copy', true);
+})
+autoUpdater.on('error', (err) => {
+  win.webContents.send('copy', true);
+})
+autoUpdater.on('download-progress', (progressObj) => {
+  win.webContents.send('copy', true);
+})
+autoUpdater.on('update-downloaded', (info) => {
+  win.webContents.send('copy', true);
+});
 
 ipcMain.on('NEW_WINDOW', () => {
     win.on('closed', () => {
